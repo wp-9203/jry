@@ -1,4 +1,4 @@
-package com.wp.srb.sms.service;
+package com.wp.jry.sms.service;
 
 import java.util.Map;
 

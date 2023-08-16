@@ -1,4 +1,4 @@
-package com.wp.srb.sms.controller.api;
+package com.wp.jry.sms.controller.api;
 
 
 import com.wp.common.api.exception.Assert;
@@ -6,8 +6,8 @@ import com.wp.common.api.result.CommonResult;
 import com.wp.common.api.result.ResponseEnum;
 import com.wp.common.api.utils.RandomUtils;
 import com.wp.common.api.utils.RegexValidateUtils;
-import com.wp.srb.sms.service.SmsService;
-import com.wp.srb.sms.utils.SmsProperties;
+import com.wp.jry.sms.service.SmsService;
+import com.wp.jry.sms.utils.SmsProperties;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -19,11 +19,12 @@ import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
-@RestController
-@RequestMapping("/api/sms")
+
 @Api(tags = "短信管理")
 @CrossOrigin //跨域
 @Slf4j
+@RestController
+@RequestMapping("/api/sms")
 public class ApiSmsController {
 
     @Resource

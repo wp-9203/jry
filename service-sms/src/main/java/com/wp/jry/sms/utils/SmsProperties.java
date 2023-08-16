@@ -1,4 +1,4 @@
-package com.wp.srb.sms.utils;
+package com.wp.jry.sms.utils;
 
 import com.sun.org.apache.xml.internal.security.Init;
 import lombok.Data;

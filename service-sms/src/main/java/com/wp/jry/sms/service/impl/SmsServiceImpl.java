@@ -1,4 +1,4 @@
-package com.wp.srb.sms.service.impl;
+package com.wp.jry.sms.service.impl;
 
 import com.aliyuncs.CommonRequest;
 import com.aliyuncs.CommonResponse;
@@ -13,8 +13,8 @@ import com.google.gson.Gson;
 import com.wp.common.api.exception.Assert;
 import com.wp.common.api.exception.BusinessException;
 import com.wp.common.api.result.ResponseEnum;
-import com.wp.srb.sms.service.SmsService;
-import com.wp.srb.sms.utils.SmsProperties;
+import com.wp.jry.sms.service.SmsService;
+import com.wp.jry.sms.utils.SmsProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
