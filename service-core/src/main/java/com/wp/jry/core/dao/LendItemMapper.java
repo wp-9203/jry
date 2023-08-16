@@ -1,6 +1,6 @@
 package com.wp.jry.core.dao;
 
-import com.wp.jry.core.entity.LendItem;
+import com.wp.jry.core.pojo.entity.LendItem;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

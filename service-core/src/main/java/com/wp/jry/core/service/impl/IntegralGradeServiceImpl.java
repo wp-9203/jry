@@ -1,6 +1,6 @@
 package com.wp.jry.core.service.impl;
 
-import com.wp.jry.core.entity.IntegralGrade;
+import com.wp.jry.core.pojo.entity.IntegralGrade;
 import com.wp.jry.core.dao.IntegralGradeMapper;
 import com.wp.jry.core.service.IIntegralGradeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

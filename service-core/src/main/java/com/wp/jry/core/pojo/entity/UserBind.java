@@ -1,4 +1,4 @@
-package com.wp.jry.core.entity;
+package com.wp.jry.core.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 用户基本信息
+ * 用户绑定表
  * </p>
  *
  * @author wp
@@ -21,8 +21,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(value="UserInfo对象", description="用户基本信息")
-public class UserInfo implements Serializable {
+@ApiModel(value="UserBind对象", description="用户绑定表")
+public class UserBind implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -30,17 +30,8 @@ public class UserInfo implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    @ApiModelProperty(value = "1：出借人 2：借款人")
-    private Integer userType;
-
-    @ApiModelProperty(value = "手机号")
-    private String mobile;
-
-    @ApiModelProperty(value = "用户密码")
-    private String password;
-
-    @ApiModelProperty(value = "用户昵称")
-    private String nickName;
+    @ApiModelProperty(value = "用户id")
+    private Long userId;
 
     @ApiModelProperty(value = "用户姓名")
     private String name;
@@ -48,28 +39,19 @@ public class UserInfo implements Serializable {
     @ApiModelProperty(value = "身份证号")
     private String idCard;
 
-    @ApiModelProperty(value = "邮箱")
-    private String email;
+    @ApiModelProperty(value = "银行卡号")
+    private String bankNo;
 
-    @ApiModelProperty(value = "微信用户标识openid")
-    private String openid;
+    @ApiModelProperty(value = "银行类型")
+    private String bankType;
 
-    @ApiModelProperty(value = "头像")
-    private String headImg;
-
-    @ApiModelProperty(value = "绑定状态（0：未绑定，1：绑定成功 -1：绑定失败）")
-    private Integer bindStatus;
-
-    @ApiModelProperty(value = "借款人认证状态（0：未认证 1：认证中 2：认证通过 -1：认证失败）")
-    private Integer borrowAuthStatus;
+    @ApiModelProperty(value = "手机号")
+    private String mobile;
 
     @ApiModelProperty(value = "绑定账户协议号")
     private String bindCode;
 
-    @ApiModelProperty(value = "用户积分")
-    private Integer integral;
-
-    @ApiModelProperty(value = "状态（0：锁定 1：正常）")
+    @ApiModelProperty(value = "状态")
     private Integer status;
 
     @ApiModelProperty(value = "创建时间")

@@ -1,5 +1,6 @@
-package com.wp.jry.core.entity;
+package com.wp.jry.core.pojo.entity;
 
+import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
@@ -13,7 +14,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 用户登录记录表
+ * 用户账户
  * </p>
  *
  * @author wp
@@ -21,8 +22,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(value="UserLoginRecord对象", description="用户登录记录表")
-public class UserLoginRecord implements Serializable {
+@ApiModel(value="UserAccount对象", description="用户账户")
+public class UserAccount implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -33,8 +34,11 @@ public class UserLoginRecord implements Serializable {
     @ApiModelProperty(value = "用户id")
     private Long userId;
 
-    @ApiModelProperty(value = "ip")
-    private String ip;
+    @ApiModelProperty(value = "帐户可用余额")
+    private BigDecimal amount;
+
+    @ApiModelProperty(value = "冻结金额")
+    private BigDecimal freezeAmount;
 
     @ApiModelProperty(value = "创建时间")
     private LocalDateTime createTime;
@@ -46,6 +50,9 @@ public class UserLoginRecord implements Serializable {
     @TableField("is_deleted")
     @TableLogic
     private Boolean deleted;
+
+    @ApiModelProperty(value = "版本号")
+    private Integer version;
 
 
 }

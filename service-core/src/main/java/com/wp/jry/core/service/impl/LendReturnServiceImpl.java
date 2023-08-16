@@ -1,7 +1,7 @@
 package com.wp.jry.core.service.impl;
 
 import com.wp.jry.core.dao.LendReturnMapper;
-import com.wp.jry.core.entity.LendReturn;
+import com.wp.jry.core.pojo.entity.LendReturn;
 import com.wp.jry.core.service.ILendReturnService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

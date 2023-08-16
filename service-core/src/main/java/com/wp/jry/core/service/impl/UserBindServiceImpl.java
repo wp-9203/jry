@@ -1,7 +1,7 @@
 package com.wp.jry.core.service.impl;
 
 import com.wp.jry.core.dao.UserBindMapper;
-import com.wp.jry.core.entity.UserBind;
+import com.wp.jry.core.pojo.entity.UserBind;
 import com.wp.jry.core.service.IUserBindService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

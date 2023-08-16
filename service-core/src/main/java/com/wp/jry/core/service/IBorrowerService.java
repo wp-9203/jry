@@ -1,6 +1,6 @@
 package com.wp.jry.core.service;
 
-import com.wp.jry.core.entity.Borrower;
+import com.wp.jry.core.pojo.entity.Borrower;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

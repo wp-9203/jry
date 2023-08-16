@@ -1,4 +1,4 @@
-package com.wp.core;
+package com.wp.jry.core;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.IdType;

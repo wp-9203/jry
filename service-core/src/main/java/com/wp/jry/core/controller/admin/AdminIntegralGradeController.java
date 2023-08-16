@@ -2,13 +2,13 @@ package com.wp.jry.core.controller.admin;
 
 
 import com.wp.common.api.exception.Assert;
-import com.wp.common.api.exception.BusinessException;
 import com.wp.common.api.result.CommonResult;
 import com.wp.common.api.result.ResponseEnum;
-import com.wp.jry.core.entity.IntegralGrade;
+import com.wp.jry.core.pojo.entity.IntegralGrade;
 import com.wp.jry.core.service.IIntegralGradeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -25,6 +25,7 @@ import java.util.List;
 @Api(tags = "积分等级管理")
 @CrossOrigin //解决跨域
 @RestController
+@Slf4j
 @RequestMapping("/admin/core/integralGrade")
 public class AdminIntegralGradeController {
     @Resource

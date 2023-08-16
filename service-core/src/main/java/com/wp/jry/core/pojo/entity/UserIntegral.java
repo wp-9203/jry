@@ -1,6 +1,5 @@
-package com.wp.jry.core.entity;
+package com.wp.jry.core.pojo.entity;
 
-import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
@@ -14,7 +13,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 用户账户
+ * 用户积分记录表
  * </p>
  *
  * @author wp
@@ -22,8 +21,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(value="UserAccount对象", description="用户账户")
-public class UserAccount implements Serializable {
+@ApiModel(value="UserIntegral对象", description="用户积分记录表")
+public class UserIntegral implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -34,11 +33,11 @@ public class UserAccount implements Serializable {
     @ApiModelProperty(value = "用户id")
     private Long userId;
 
-    @ApiModelProperty(value = "帐户可用余额")
-    private BigDecimal amount;
+    @ApiModelProperty(value = "积分")
+    private Integer integral;
 
-    @ApiModelProperty(value = "冻结金额")
-    private BigDecimal freezeAmount;
+    @ApiModelProperty(value = "获取积分说明")
+    private String content;
 
     @ApiModelProperty(value = "创建时间")
     private LocalDateTime createTime;
@@ -50,9 +49,6 @@ public class UserAccount implements Serializable {
     @TableField("is_deleted")
     @TableLogic
     private Boolean deleted;
-
-    @ApiModelProperty(value = "版本号")
-    private Integer version;
 
 
 }

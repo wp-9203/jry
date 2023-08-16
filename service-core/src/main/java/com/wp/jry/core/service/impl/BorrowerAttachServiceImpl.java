@@ -1,6 +1,6 @@
 package com.wp.jry.core.service.impl;
 
-import com.wp.jry.core.entity.BorrowerAttach;
+import com.wp.jry.core.pojo.entity.BorrowerAttach;
 import com.wp.jry.core.dao.BorrowerAttachMapper;
 import com.wp.jry.core.service.IBorrowerAttachService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

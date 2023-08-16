@@ -1,4 +1,4 @@
-package com.wp.core;
+package com.wp.jry.core;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.util.Assert;

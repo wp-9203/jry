@@ -16,6 +16,7 @@ public enum ResponseEnum {
     SERVLET_ERROR(-102, "servlet请求异常"), //-2xx 参数校验
     UPLOAD_ERROR(-103, "文件上传错误"),
     EXPORT_DATA_ERROR(104, "数据导出失败"),
+    iMPORT_DATA_ERROE(105,"Excel数据导入失败"),
 
 
     //-2xx 参数校验

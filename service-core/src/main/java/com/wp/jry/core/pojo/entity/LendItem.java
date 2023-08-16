@@ -1,4 +1,4 @@
-package com.wp.jry.core.entity;
+package com.wp.jry.core.pojo.entity;
 
 import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.IdType;

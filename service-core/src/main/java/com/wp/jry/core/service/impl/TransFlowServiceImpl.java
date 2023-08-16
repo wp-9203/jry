@@ -1,7 +1,7 @@
 package com.wp.jry.core.service.impl;
 
 import com.wp.jry.core.dao.TransFlowMapper;
-import com.wp.jry.core.entity.TransFlow;
+import com.wp.jry.core.pojo.entity.TransFlow;
 import com.wp.jry.core.service.ITransFlowService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

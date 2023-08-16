@@ -1,6 +1,6 @@
 package com.wp.jry.core.service.impl;
 
-import com.wp.jry.core.entity.LendItemReturn;
+import com.wp.jry.core.pojo.entity.LendItemReturn;
 import com.wp.jry.core.dao.LendItemReturnMapper;
 import com.wp.jry.core.service.ILendItemReturnService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

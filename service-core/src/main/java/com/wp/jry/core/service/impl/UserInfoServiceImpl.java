@@ -1,7 +1,7 @@
 package com.wp.jry.core.service.impl;
 
 import com.wp.jry.core.dao.UserInfoMapper;
-import com.wp.jry.core.entity.UserInfo;
+import com.wp.jry.core.pojo.entity.UserInfo;
 import com.wp.jry.core.service.IUserInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.wp.jry.core.entity;
+package com.wp.jry.core.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -8,8 +8,10 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 /**
  * <p>
@@ -22,9 +24,18 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="Dict对象", description="数据字典")
+@NoArgsConstructor
 public class Dict implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    public Dict(Long id, Long parentId, String name, Integer value, String dictCode) {
+        this.id = id;
+        this.parentId = parentId;
+        this.name = name;
+        this.value = value;
+        this.dictCode = dictCode;
+    }
 
     @ApiModelProperty(value = "id")
     @TableId(value = "id", type = IdType.AUTO)
@@ -53,5 +64,6 @@ public class Dict implements Serializable {
     @TableLogic
     private Boolean deleted;
 
-
+    @TableField(exist = false)
+    private Boolean hasChildren;
 }
