@@ -47,7 +47,7 @@ public class ApiSmsController {
         String code = RandomUtils.getFourBitRandom();
         HashMap<String, Object> map = new HashMap<>();
         map.put("code", code);
-        smsService.send(mobile, SmsProperties.TEMPLATE_CODE, map);
+        //smsService.send(mobile, SmsProperties.TEMPLATE_CODE, map);  阿里账号不可用
 
         //将验证码存入redis
         redisTemplate.opsForValue().set("srb:sms:code:" + mobile, code, 5, TimeUnit.MINUTES);
