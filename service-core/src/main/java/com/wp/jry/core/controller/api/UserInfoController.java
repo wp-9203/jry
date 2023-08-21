@@ -78,4 +78,10 @@ public class UserInfoController {
                 CommonResult.success()
                 :CommonResult.setCommonResult(ResponseEnum.LOGIN_AUTH_ERROR);
     }
+    @ApiOperation("校验手机号是否注册")
+    @GetMapping("/checkMobile/{mobile}")
+    public boolean checkMobile(@PathVariable String mobile){
+        return  iUserInfoService.checkMobile(mobile);
+
+    }
 }

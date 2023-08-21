@@ -9,7 +9,7 @@ spring:
 
   #spring:
   redis:
-    host: 192.168.235.131
+    host: 192.168.2.130
     port: 6379
     database: 0
     timeout: 3000ms #最大等待时间，超时则抛出异常，否则请求一直等待
@@ -19,7 +19,22 @@ spring:
         max-wait: -1    #最大阻塞等待时间，负值表示没限制，默认-1
         max-idle: 8     #最大空闲连接，默认8
         min-idle: 0     #最小空闲连接，默认0
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 10000 #连接超时配置
+        read-timeout: 600000 #执行超时配置
+  sentinel:
+    enabled: true #开启feign对sentinel的支持
 
+logging:
+  level:
+    com.wp.jry.sms.client.CoreUserInfoClient: DEBUG #以什么级别监控哪个接口
 #阿里云短信
 aliyun:
   sms:
@@ -28,3 +43,4 @@ aliyun:
     key-secret: N7v6R4V3EJ1SGDZlsqtqo8QyVVMmtQ
     template-code: SMS_96695065
     sign-name: 谷粒
+

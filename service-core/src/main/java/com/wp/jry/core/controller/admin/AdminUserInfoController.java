@@ -46,5 +46,13 @@ public class AdminUserInfoController {
         IPage<UserInfo> userInfoIPage =iUserInfoService.listPage(pageParam,userInfoQuery);
         return CommonResult.success().data("userInfoPage",userInfoIPage);
     }
+    @ApiOperation("锁定与解锁")
+    @PutMapping("/locked/{id}/{status}")
+    public CommonResult locked(
+            @ApiParam(value = "用户id",required = true)@PathVariable Long id ,
+            @ApiParam(value = "锁定状态",required = true) @PathVariable Integer status){
+        iUserInfoService.lock(id,status);
+        return CommonResult.success().message(status == 1?"解锁成功":"锁定");
+    }
 
 }

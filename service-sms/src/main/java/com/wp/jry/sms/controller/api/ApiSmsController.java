@@ -6,6 +6,7 @@ import com.wp.common.api.result.CommonResult;
 import com.wp.common.api.result.ResponseEnum;
 import com.wp.common.api.utils.RandomUtils;
 import com.wp.common.api.utils.RegexValidateUtils;
+import com.wp.jry.sms.client.CoreUserInfoClient;
 import com.wp.jry.sms.service.SmsService;
 import com.wp.jry.sms.utils.SmsProperties;
 import io.swagger.annotations.Api;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
@@ -33,6 +35,9 @@ public class ApiSmsController {
     @Resource
     private RedisTemplate redisTemplate;
 
+    @Resource
+    private CoreUserInfoClient coreUserInfoClient;
+
     @ApiOperation("获取验证码")
     @GetMapping("/send/{mobile}")
     public CommonResult send(
@@ -43,6 +48,11 @@ public class ApiSmsController {
         Assert.notEmpty(mobile, ResponseEnum.MOBILE_NULL_ERROR);
         //是否是合法的手机号码
         Assert.isTrue(RegexValidateUtils.checkCellphone(mobile), ResponseEnum.MOBILE_ERROR);
+        //校验手机号是否已注册
+        boolean result= coreUserInfoClient.checkMobile(mobile);
+        Assert.isTrue( result == false,ResponseEnum.MOBILE_EXIST_ERROR);
+
+
 
         String code = RandomUtils.getFourBitRandom();
         HashMap<String, Object> map = new HashMap<>();
