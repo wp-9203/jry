@@ -22,7 +22,7 @@ import java.util.List;
  * @since 2023-08-08
  */
 @Api(tags = "用户登录日志管理")
-@CrossOrigin //跨域
+//@CrossOrigin //跨域
 @Slf4j
 @RestController
 @RequestMapping("/admin/core/userLoginRecord")
@@ -30,7 +30,7 @@ public class UserLoginRecordController {
     @Resource
     IUserLoginRecordService iUserLoginRecordService;
     @ApiOperation("登录日志")
-    @GetMapping("/listTpo50/{userId}")
+    @GetMapping("/listTop50/{userId}")
     public CommonResult getuserLoginRecord(@ApiParam("用户ID") @PathVariable("userId") Long userId){
 
          List<UserLoginRecord> loginRecords =iUserLoginRecordService.listTop50(userId);

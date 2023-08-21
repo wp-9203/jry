@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 
 @Api(tags = "短信管理")
-@CrossOrigin //跨域
+//@CrossOrigin //跨域
 @Slf4j
 @RestController
 @RequestMapping("/api/sms")

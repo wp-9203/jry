@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Api(tags = "数据字典管理")
-@CrossOrigin //解决跨域
+//@CrossOrigin //解决跨域
 @RestController
 @Slf4j
 @RequestMapping("/admin/core/dict")

@@ -27,7 +27,7 @@ import javax.servlet.http.HttpServletRequest;
  * @since 2023-08-08
  */
 @Api(tags = "会员管理")
-@CrossOrigin //跨域
+//@CrossOrigin //跨域
 @Slf4j
 @RestController
 @RequestMapping("/api/core/userInfo")
